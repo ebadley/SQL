@@ -1,0 +1,24 @@
+create table candy_shop (id integer primary key, name text, price integer, aisle integer, in_stock text, quantity_available integer);
+insert into candy_shop values (1, "snickers", 1, 1, "yes", 56);
+insert into candy_shop values (2, "twix", 1, 1, "yes", 32);
+insert into candy_shop values (3, "m&ms", 1, 1, "yes", 87);
+insert into candy_shop values (4, "butterfinger", 1, 1, "no", 0);
+insert into candy_shop values (5, "reese's cup", 1, 1, "yes", 49);
+insert into candy_shop values (6, "skittles", 1, 2, "no", 0);
+insert into candy_shop values (7, "starbursts", 1, 2, "yes", 18);
+insert into candy_shop values (8, "cotton candy", 3, 2, "yes", 6);
+insert into candy_shop values (9, "ghiradelli", 5, 3, "yes", 92);
+insert into candy_shop values (10, "ferrero rocher", 5, 3, "yes", 39);
+insert into candy_shop values (11, "dozen dipped strawberries", 20, 10, "yes", 12);
+insert into candy_shop values (12, "caramel apples", 7, 10, "no", 0);
+insert into candy_shop values (13, "fudge", 10, 5, "yes", 18);
+insert into candy_shop values (14, "dipped pretzels", 2, 5, "yes", 30);
+insert into candy_shop values (15, "bottled water", 2, 7, "yes", 432);
+
+select * from candy_shop;
+
+select name, price from candy_shop order by price;
+
+select avg (price)from candy_shop;
+
+select name from candy_shop where in_stock = "yes" order by name asc;
